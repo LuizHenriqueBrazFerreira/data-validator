@@ -6,8 +6,9 @@
   "scripts": {
     "test": "npm",
     "dev": "vite --open",
-    "lint": "eslint ./src",
-    "build": "vite build"
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js",
+    "build": "vite build",
+    "start": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   },
   "repository": {
     "type": "git",
